@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/G87WO1e-)
 # UG8_B_2026 - Umbrella Secure Terminal (Sector B)
 
 Lengkapilah program terminal inventaris pasokan Umbrella Corporation (Sector B) ini agar memiliki fitur-fitur berikut:
