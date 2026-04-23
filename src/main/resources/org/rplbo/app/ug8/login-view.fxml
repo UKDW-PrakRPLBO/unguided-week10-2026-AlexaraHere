@@ -1,15 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<!--Buatlah Semirip mungkin, bebas asalkan jalan-->
+<AnchorPane prefHeight="358.0" prefWidth="329.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.rplbo.app.ug8.Controller.LoginController">
+    <children>
+        <VBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+            <children>
+                <Label text="UMBRELLA CORP - SECTOR B" textFill="#333333">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Label>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.rplbo.app.ug8.Controller.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="OPERATIVE ID:" textFill="#555555">
+                            <font>
+                                <Font name="System" size="12.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtUsername" prefHeight="40.0" style="-fx-background-radius: 5; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="PASSCODE:" textFill="#555555">
+                            <font>
+                                <Font name="System" size="12.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="txtPassword" prefHeight="40.0" style="-fx-background-radius: 5; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
+                    </children>
+                </VBox>
+
+                <Button fx:id="btnLogin" maxWidth="500" mnemonicParsing="false" onAction="#handleLogin" prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-background-radius: 5; -fx-border-radius: 5; -fx-cursor: hand;" text="AUTHENTICATE" textFill="#333333">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+
+                <Label fx:id="lblStatus" textAlignment="CENTER" textFill="#d32f2f">
+                    <font>
+                        <Font name="System Italic" size="13.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>

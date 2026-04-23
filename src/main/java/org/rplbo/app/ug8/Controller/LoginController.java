@@ -26,7 +26,21 @@ public class LoginController {
         // ==============================================================================
 
         // --- TULIS KODE ANDA DI BAWAH INI ---
+        String user = txtUsername.getText();
+        String pass = txtPassword.getText();
 
+        UmbrellaDBManager db = new UmbrellaDBManager();
+        String fullname = db.validateUser(user, pass);
 
+        if (fullname != null) {
+            UmbrellaApp.loggedInUser = fullname;
+            try {
+                UmbrellaApp.switchScene("umbrella-view.fxml");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            lblStatus.setText("AUTHENTICATION FAILED");
+        }
     }
 }
